@@ -19,5 +19,8 @@ public class PhonecaseDao {
 			public List<Phonecase> list(){
 				return sqlSession.selectList("phonecase.list");
 			}
+			public int insertGood(Phonecase phonecase) {
+				return sqlSession.insert("phonecase.insertgood",phonecase);
+			}
 
 }

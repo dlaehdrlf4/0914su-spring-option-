@@ -8,4 +8,9 @@
 <select id="list" resultType="com.mybatis.domain.Phonecase">
 	select code,name,price,des from phonecase
 </select>
+
+	<insert id = "insertgood"
+	parameterType="com.mybatis.domain.Phonecase">
+	insert into phonecase(code,name,price,des) values(#{code}, #{name}, #{price}, #{des})
+	</insert>
 </mapper>

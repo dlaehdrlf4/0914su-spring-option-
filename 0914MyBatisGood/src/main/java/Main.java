@@ -14,6 +14,13 @@ public class Main {
 		
 		PhonecaseDao dao = context.getBean(PhonecaseDao.class);
 		
+		Phonecase a = new Phonecase();
+		a.setCode(6);
+		a.setName("토토");
+		a.setPrice(12000);
+		a.setDes("귀엽다.");
+		dao.insertGood(a);
+		
 		//System.out.println(dao.list());
 		List<Phonecase> list = dao.list();
 		for(Phonecase imsi : list) {
